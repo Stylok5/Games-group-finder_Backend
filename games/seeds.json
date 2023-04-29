@@ -1,0 +1,30 @@
+[
+{
+  "model": "games.game",
+  "pk": 1,
+  "fields": {
+    "title": "Rust",
+    "release_date": "2013",
+    "image": "https://i.imgur.com/bjaVgcJ.jpg",
+    "description": "Hard",
+    "platforms": "Pc",
+    "genre": [
+      1
+    ]
+  }
+},
+{
+  "model": "games.game",
+  "pk": 2,
+  "fields": {
+    "title": "Lost Ark",
+    "release_date": "2018",
+    "image": "https://i.imgur.com/N2y73nd.jpg",
+    "description": "GOOd",
+    "platforms": "PC",
+    "genre": [
+      2
+    ]
+  }
+}
+]
