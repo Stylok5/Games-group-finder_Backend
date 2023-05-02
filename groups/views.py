@@ -23,6 +23,9 @@ class GroupListView(APIView):
         return Response(serialized_groups.data, status=status.HTTP_200_OK)
 
     def post(self, request):
+        if not request.user:
+            return Response({"detail": "Authentication credentials were not provided."}, status=status.HTTP_401_UNAUTHORIZED)
+
         game_title = request.data.get('title', None)
         game = Game.objects.get(title=game_title)
         request.data['game'] = game.id
@@ -42,7 +45,7 @@ class GroupListView(APIView):
             return Response(res, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
         except AssertionError as e:
-            return Response({"detail": str(e)}, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+            return Response({"error": "Group name already exists"}, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
         except:
             return Response({"detail": "Unproccesible Entity"}, status=status.HTTP_422_UNPROCESSABLE_ENTITY)

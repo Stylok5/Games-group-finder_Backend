@@ -15,7 +15,7 @@ class GameListView(APIView):
         if page:
             games = Game.objects.all()
             paginator = PageNumberPagination()
-            paginator.page_size = 10  # number of games per page
+            paginator.page_size = 9  # number of games per page
             result_page = paginator.paginate_queryset(games, request)
             serialized_products = GameSerializer(result_page, many=True)
             return paginator.get_paginated_response(serialized_products.data)

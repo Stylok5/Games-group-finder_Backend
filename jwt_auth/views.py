@@ -108,4 +108,4 @@ class UserDetailListView(APIView):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
         else:
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            return Response({'error': 'A user with that username already exists'}, status=status.HTTP_400_BAD_REQUEST)

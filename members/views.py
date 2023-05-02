@@ -53,13 +53,23 @@ class RemoveMember(APIView):
             raise NotFound(
                 detail="Can not find a member with that primary key")
 
-    def delete(self, request, group_pk, member_pk):
-        member_to_remove = self.get_member(
-            group_pk=group_pk, member_pk=member_pk)
+    def delete(self, request, group_pk, member_pk=None):
+        if member_pk:
+            member_to_remove = self.get_member(
+                group_pk=group_pk, member_pk=member_pk)
 
-        # Check if the user making the request is the owner of the group
-        # if request.user != member_to_remove.group.owner:
-        #     return Response({'error': 'You do not have permission to remove this member.'}, status=status.HTTP_403_FORBIDDEN)
+            # Check if the user making the request is the owner of the group
+            if request.user != member_to_remove.group.owner:
+                return Response({'error': 'You do not have permission to remove this member.'}, status=status.HTTP_403_FORBIDDEN)
 
-        member_to_remove.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+            member_to_remove.delete()
+            return Response(status=status.HTTP_204_NO_CONTENT)
+        else:
+            try:
+                member_to_remove = Member.objects.get(
+                    group__pk=group_pk, user=request.user)
+            except Member.DoesNotExist:
+                raise NotFound(detail="You are not a member of this group.")
+
+            member_to_remove.delete()
+            return Response({'detail': 'You have left the group.'}, status=status.HTTP_204_NO_CONTENT)

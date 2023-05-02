@@ -1,6 +1,3 @@
-from groups.serializers.common import GroupSerializer
-from jwt_auth.serializers.common import UserSerializer
-from .common import MemberSerializer
 from rest_framework import serializers
 from ..models import Member
 

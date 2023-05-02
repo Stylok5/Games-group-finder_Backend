@@ -9,7 +9,6 @@ from games.serializers.common import GameSerializer
 
 class PopulatedGroupSerializer(GroupSerializer):
     game = serializers.CharField(source='game.title')
-    # game = GameSerializer()
     owner = UserSerializer()
     members = PopulatedMemberSerializer(many=True)
     groupchat_messages = PopulatedGroupChatSerializer(many=True)
