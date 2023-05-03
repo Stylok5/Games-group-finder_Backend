@@ -4,11 +4,7 @@ from rest_framework.response import Response
 from .models import Member
 from groups.models import Group
 from rest_framework.exceptions import NotFound
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.permissions import IsAuthenticated
-from groups.serializers.common import GroupSerializer
-from .serializer.common import MemberSerializer
-from django.db import IntegrityError
 
 
 class RequestMembership(APIView):

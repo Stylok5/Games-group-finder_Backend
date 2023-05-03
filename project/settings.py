@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'genres',
     'members',
     'groupchat',
+    'ratings',
 ]
 
 REST_FRAMEWORK = {

@@ -21,8 +21,9 @@ class Group(models.Model):
         related_name='members_group',
         blank=True
     )
-
     description = models.CharField(max_length=500)
+    likes = models.IntegerField(default=0)
+    dislikes = models.IntegerField(default=0)
 
     def __str__(self):
         return f'{self.name} created by {self.owner}'

@@ -45,7 +45,7 @@ class GroupListView(APIView):
             return Response(res, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
         except AssertionError as e:
-            return Response({"error": "Group name already exists"}, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+            return Response({"error": "A group with this title already exists"}, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
         except:
             return Response({"detail": "Unproccesible Entity"}, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
@@ -84,7 +84,7 @@ class GroupDetailView(APIView):
             updated_group.save()
             return Response(updated_group.data, status=status.HTTP_202_ACCEPTED)
         except ValidationError as e:
-            return Response({"detail": e.detail}, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+            return Response({"error": "A group with this title already exists"}, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
         except:
             return Response({"detail": "Unproccesible Entity"}, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
