@@ -13,7 +13,7 @@ class PopulatedUserSerializer(UserSerializer):
     class Meta:
         model = User
         fields = ('id', 'profile_image', 'description',
-                  'username', 'email', 'groups', 'discord_link')
+                  'username', 'email', 'groups', 'discord_username')
         extra_kwargs = {
             'username': {'required': False},
         }

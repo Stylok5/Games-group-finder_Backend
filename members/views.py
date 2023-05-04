@@ -58,7 +58,7 @@ class RemoveMember(APIView):
             if request.user != member_to_remove.group.owner:
                 return Response({'error': 'You do not have permission to remove this member.'}, status=status.HTTP_403_FORBIDDEN)
 
-            member_to_remove.delete()
+            # member_to_remove.delete()
             return Response(status=status.HTTP_204_NO_CONTENT)
         else:
             try:

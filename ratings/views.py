@@ -61,7 +61,7 @@ class Dislike(APIView):
                 group=group, user=user, dislikes=1, has_disliked=True)
 
         # update the group likes count
-        group.likes += 1
+        group.dislikes += 1
         group.save()
 
         # return the updated user likes count

@@ -4,7 +4,8 @@ from django.db import models
 
 class Game(models.Model):
     title = models.CharField(max_length=50)
-    release_date = models.CharField(max_length=50)
+    developer = models.CharField(max_length=50)
+    release_date = models.CharField(max_length=200)
     image = models.CharField(max_length=500)
     genre = models.ManyToManyField('genres.Genre', related_name="albums")
     description = models.CharField(max_length=500)

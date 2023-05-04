@@ -105,6 +105,9 @@ class UserDetailListView(APIView):
         serializer = PopulatedUserSerializer(user, data=request.data)
 
         if serializer.is_valid():
+            new_username = serializer.validated_data.get('username')
+            if new_username != user.username and User.objects.filter(username=new_username).exists():
+                return Response({'error': 'The username you entered is already taken. Please choose a different username.'}, status=status.HTTP_400_BAD_REQUEST)
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
         else:
