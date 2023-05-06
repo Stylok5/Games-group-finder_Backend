@@ -59,7 +59,7 @@ REST_FRAMEWORK = {
 }
 
 CORS_ORIGIN_WHITELIST = (
-    'https://645644339d0f670d001f2631--dainty-pixie-65fd89.netlify.app/',
+    'https://games-group-finder.herokuapp.com',
 )
 
 MIDDLEWARE = [
