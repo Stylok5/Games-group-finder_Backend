@@ -59,7 +59,7 @@ REST_FRAMEWORK = {
 }
 
 CORS_ORIGIN_WHITELIST = (
-    'http://localhost:5176',
+    'https://645644339d0f670d001f2631--dainty-pixie-65fd89.netlify.app/',
 )
 
 MIDDLEWARE = [
