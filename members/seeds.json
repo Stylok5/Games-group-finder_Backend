@@ -1,0 +1,10 @@
+[
+{
+  "model": "members.member",
+  "pk": 14,
+  "fields": {
+    "user": 3,
+    "group": 1
+  }
+}
+]

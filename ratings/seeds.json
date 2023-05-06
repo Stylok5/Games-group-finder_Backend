@@ -1,0 +1,86 @@
+[
+{
+  "model": "ratings.rating",
+  "pk": 1,
+  "fields": {
+    "group": 1,
+    "user": 3,
+    "likes": 1,
+    "dislikes": 1,
+    "has_liked": true,
+    "has_disliked": true
+  }
+},
+{
+  "model": "ratings.rating",
+  "pk": 3,
+  "fields": {
+    "group": 4,
+    "user": 3,
+    "likes": 0,
+    "dislikes": 1,
+    "has_liked": false,
+    "has_disliked": true
+  }
+},
+{
+  "model": "ratings.rating",
+  "pk": 4,
+  "fields": {
+    "group": 4,
+    "user": 7,
+    "likes": 1,
+    "dislikes": 1,
+    "has_liked": true,
+    "has_disliked": true
+  }
+},
+{
+  "model": "ratings.rating",
+  "pk": 6,
+  "fields": {
+    "group": 8,
+    "user": 7,
+    "likes": 1,
+    "dislikes": 1,
+    "has_liked": true,
+    "has_disliked": true
+  }
+},
+{
+  "model": "ratings.rating",
+  "pk": 8,
+  "fields": {
+    "group": 1,
+    "user": 7,
+    "likes": 1,
+    "dislikes": 1,
+    "has_liked": true,
+    "has_disliked": true
+  }
+},
+{
+  "model": "ratings.rating",
+  "pk": 9,
+  "fields": {
+    "group": 12,
+    "user": 7,
+    "likes": 1,
+    "dislikes": 1,
+    "has_liked": true,
+    "has_disliked": true
+  }
+},
+{
+  "model": "ratings.rating",
+  "pk": 10,
+  "fields": {
+    "group": 14,
+    "user": 7,
+    "likes": 1,
+    "dislikes": 1,
+    "has_liked": true,
+    "has_disliked": true
+  }
+}
+]

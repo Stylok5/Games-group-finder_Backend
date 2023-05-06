@@ -4,10 +4,12 @@
   "pk": 1,
   "fields": {
     "title": "Rust",
-    "release_date": "2013",
+    "developer": "Facepunch Studios Double Eleven",
+    "release_date": "8 February 2018",
     "image": "https://i.imgur.com/bjaVgcJ.jpg",
-    "description": "Hard",
-    "platforms": "Pc",
+    "description": "The only aim in Rust is to survive. Everything wants you to die - the island’s wildlife and other inhabitants, the environment, other survivors. Do whatever it takes to last another night.",
+    "platforms": "macOS Windows PlayStation 4 Xbox One",
+    "official_site": "https://rust.facepunch.com/",
     "genre": [
       1
     ]
@@ -18,12 +20,270 @@
   "pk": 2,
   "fields": {
     "title": "Lost Ark",
-    "release_date": "2018",
+    "developer": "Tripod Studio Smilegate",
+    "release_date": "Korea: December 4, 2019 Worldwide: February 11, 2022",
     "image": "https://i.imgur.com/N2y73nd.jpg",
-    "description": "GOOd",
-    "platforms": "PC",
+    "description": "Embark on an odyssey for the Lost Ark in a vast, vibrant world: explore new lands, seek out lost treasures, and test yourself in thrilling action combat in this action-packed free-to-play RPG.",
+    "platforms": "Windows",
+    "official_site": "https://www.playlostark.com/en-us",
     "genre": [
       2
+    ]
+  }
+},
+{
+  "model": "games.game",
+  "pk": 3,
+  "fields": {
+    "title": "Destiny 2",
+    "developer": "Bungie",
+    "release_date": "September 6 2017",
+    "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1085660/capsule_616x353.jpg?t=1680800510",
+    "description": "Destiny 2 is an action MMO with a single evolving world that you and your friends can join anytime, anywhere, absolutely free.",
+    "platforms": "PlayStation 4 Xbox One Windows Stadia PlayStation 5 Xbox Series X/S",
+    "official_site": "https://www.bungie.net/7/en/destiny/newlight",
+    "genre": [
+      3
+    ]
+  }
+},
+{
+  "model": "games.game",
+  "pk": 4,
+  "fields": {
+    "title": "Hunt Showdown",
+    "developer": "Crytek, Crytek Frankfurt",
+    "release_date": "27 August 2019",
+    "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/594650/capsule_616x353.jpg?t=1683115449",
+    "description": "Hunt: Showdown is a high-stakes, tactical PvPvE first-person shooter. Hunt for bounties in the infested Bayou, kill nightmarish monsters and outwit competing hunters - alone or in a group - with your glory, gear, and gold on the line.",
+    "platforms": "Microsoft Windows PlayStation 4 Xbox One Xbox Series X/S PlayStation 5",
+    "official_site": "https://www.huntshowdown.com/",
+    "genre": [
+      3
+    ]
+  }
+},
+{
+  "model": "games.game",
+  "pk": 5,
+  "fields": {
+    "title": "League of Legends",
+    "developer": "Riot Games",
+    "release_date": "October 27 2009",
+    "image": "https://cdn1.epicgames.com/offer/24b9b5e323bc40eea252a10cdd3b2f10/LOL_2560x1440-98749e0d718e82d27a084941939bc9d3",
+    "description": "League of Legends is a team-based strategy game where two teams of five powerful champions face off to destroy the other’s base. Choose from over 140 champions to make epic plays, secure kills, and take down towers as you battle your way to victory.",
+    "platforms": "Microsoft Windows macOS",
+    "official_site": "https://www.leagueoflegends.com/el-gr/",
+    "genre": [
+      4
+    ]
+  }
+},
+{
+  "model": "games.game",
+  "pk": 6,
+  "fields": {
+    "title": "Overwatch 2",
+    "developer": "Blizzard Entertainment",
+    "release_date": "October 4, 2022",
+    "image": "https://news.xbox.com/en-us/wp-content/uploads/sites/2/2022/10/OW2-be9287b234afbe7898ac.jpg",
+    "description": "Overwatch 2 is a free-to-play, team-based action game set in the optimistic future, where every match is the ultimate 5v5 battlefield brawl. Play as a time-jumping freedom fighter, a beat-dropping battlefield DJ, or one of over 30 other unique heroes as you battle it out around the globe.",
+    "platforms": "Nintendo Switch PlayStation 4 PlayStation 5 Windows Xbox One Xbox Series X/S",
+    "official_site": "https://overwatch.blizzard.com/en-us/",
+    "genre": [
+      3
+    ]
+  }
+},
+{
+  "model": "games.game",
+  "pk": 7,
+  "fields": {
+    "title": "Ark: Survival Evolved",
+    "developer": "Studio Wildcard",
+    "release_date": "August 29, 2017",
+    "image": "https://pbs.twimg.com/media/FpqrZ20XEAEbhw2?format=jpg&name=large",
+    "description": "Stranded on the shores of a mysterious island, you must learn to survive. Use your cunning to kill or tame the primeval creatures roaming the land, and encounter oth",
+    "platforms": "Linux macOS PlayStation 4 Windows Xbox One Android iOS Nintendo Switch Stadia",
+    "official_site": "https://playark.com/",
+    "genre": [
+      1
+    ]
+  }
+},
+{
+  "model": "games.game",
+  "pk": 8,
+  "fields": {
+    "title": "Call of Duty: Warzone",
+    "developer": "Infinity Ward Raven Software[",
+    "release_date": "March 10 2020",
+    "image": "https://assets.xboxservices.com/assets/d2/e7/d2e74bfc-22e1-4985-860f-dc76d69e5b8f.jpg?n=CoD-Warzone_GLP-Page-Hero-1084_1920x1080.jpg",
+    "description": "Welcome to Warzone, the massive free-to-play combat arena from the world of Modern Warfare®. Drop In Join forces with your friernds and jump into a battleground with up to 150 players.  Loot For Rewards Discover supply boxes and complete contracts to build your arsenal and gain a tactical advantage.  Battle Across Two Epic Modes Experience a new way to 'Battle Royale' or play 'Plunder' in a race to earn the most Cash in the match.",
+    "platforms": "PlayStation 4 Windows Xbox One",
+    "official_site": "https://www.callofduty.com/playnow/warzone2",
+    "genre": [
+      5
+    ]
+  }
+},
+{
+  "model": "games.game",
+  "pk": 9,
+  "fields": {
+    "title": "Apex Legends",
+    "developer": "Respawn Entertainment, Panic Button Games",
+    "release_date": "February 4 2019",
+    "image": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/apex-featured-image-16x9.jpg.adapt.crop16x9.1023w.jpg",
+    "description": "Apex Legends is the award-winning, free-to-play Hero Shooter from Respawn Entertainment. Master an ever-growing roster of legendary characters with powerful abilities, and experience strategic squad play and innovative gameplay in the next evolution of Hero Shooter and Battle Royale.",
+    "platforms": "PlayStation 4 Windows Xbox One Nintendo Switch PlayStation 5 Xbox Series X/S Android iOS",
+    "official_site": "https://www.ea.com/games/apex-legends",
+    "genre": [
+      5
+    ]
+  }
+},
+{
+  "model": "games.game",
+  "pk": 10,
+  "fields": {
+    "title": "Valorant",
+    "developer": "Riot Games",
+    "release_date": "June 2 2020",
+    "image": "https://cdn.arstechnica.net/wp-content/uploads/2020/04/valorant-listing-800x450.jpg",
+    "description": "VALORANT is a character-based 5v5 tactical shooter set on the global stage. Outwit, outplay, and outshine your competition with tactical abilities, precise gunplay, and adaptive teamwork.",
+    "platforms": "Windows",
+    "official_site": "https://playvalorant.com/en-gb/",
+    "genre": [
+      6
+    ]
+  }
+},
+{
+  "model": "games.game",
+  "pk": 11,
+  "fields": {
+    "title": "Fortnite",
+    "developer": "Epic Games",
+    "release_date": "July 25 2017 (early access)",
+    "image": "https://prod.assets.earlygamecdn.com/images/fortnite-battle-pass-skins-chapter-4-season-2.jpg?mtime=1678453631",
+    "description": "Grab all of your friends and drop into Epic Games' Fortnite, a massive 100-player face-off that combines looting, crafting, shootouts and chaos. The result is a completely unpredictable competitive online experience that gets bigger and even wilder with every new season.",
+    "platforms": "Windows macOS Nintendo Switch PlayStation 4 PlayStation 5 Xbox One Xbox Series X/S iOS Android",
+    "official_site": "https://www.fortnite.com/",
+    "genre": [
+      5
+    ]
+  }
+},
+{
+  "model": "games.game",
+  "pk": 12,
+  "fields": {
+    "title": "Counter-Strike: GO",
+    "developer": "Valve Hidden Path Entertainment",
+    "release_date": "August 21 2012",
+    "image": "https://i0.wp.com/insider-gaming.com/wp-content/uploads/2023/02/csgo.jpg?fit=1920%2C1080&ssl=1",
+    "description": "Counter-Strike: Global Offensive (CS: GO) expands upon the team-based action gameplay that it pioneered when it was launched 19 years ago. CS: GO features new maps, characters, weapons, and game modes, and delivers updated versions of the classic CS content (de_dust2, etc.).",
+    "platforms": "OS X PlayStation 3 Windows Xbox 360 Linux",
+    "official_site": "https://www.counter-strike.net/news",
+    "genre": [
+      6
+    ]
+  }
+},
+{
+  "model": "games.game",
+  "pk": 13,
+  "fields": {
+    "title": "Dota 2",
+    "developer": "Valve",
+    "release_date": "July 9 2013",
+    "image": "https://i.ytimg.com/vi/qdMTOvYBsPQ/maxresdefault.jpg",
+    "description": "Every day, millions of players worldwide enter battle as one of over a hundred Dota heroes. And no matter if it's their 10th hour of play or 1,000th, there's always something new to discover. With regular updates that ensure a constant evolution of gameplay, features, and heroes, Dota 2 has taken on a life of its own.",
+    "platforms": "Windows Linux OS X",
+    "official_site": "http://www.dota2.com",
+    "genre": [
+      4
+    ]
+  }
+},
+{
+  "model": "games.game",
+  "pk": 14,
+  "fields": {
+    "title": "Grand Theft Auto Online",
+    "developer": "Rockstar Games, Rockstar North",
+    "release_date": "17 September 2013",
+    "image": "https://blog.playstation.com/tachyon/2022/03/63ffd090388601f6147ef58f8a9433ddb6fa8d6b-scaled.jpg",
+    "description": "Experience GTA Online, a dynamic and ever-evolving online universe for up to 30 players, including all existing gameplay upgrades and content released since launch ready to enjoy solo or with friends.",
+    "platforms": "PlayStation 4, PlayStation 5, PlayStation 3, Xbox One, Xbox 360, Xbox Series X & S, Windows",
+    "official_site": "https://www.rockstargames.com/gta-online",
+    "genre": [
+      7
+    ]
+  }
+},
+{
+  "model": "games.game",
+  "pk": 15,
+  "fields": {
+    "title": "Tom Clancy's R6 Siege",
+    "developer": "Ubisoft Montreal",
+    "release_date": "December 1 2015",
+    "image": "https://cdn-ext.fanatical.com/production/product/1280x720/f203315f-dd14-4492-8cd1-d422016820e8.jpeg",
+    "description": "om Clancy's Rainbow Six® Siege is an elite, tactical team-based shooter where superior planning and execution triumph.",
+    "platforms": "PlayStation 4 Windows Xbox One PlayStation 5 Xbox Series X/S Google Stadia",
+    "official_site": "https://www.ubisoft.com/en-gb/game/rainbow-six/siege",
+    "genre": [
+      6
+    ]
+  }
+},
+{
+  "model": "games.game",
+  "pk": 16,
+  "fields": {
+    "title": "Minecraft",
+    "developer": "Markus Persson Jens Bergensten",
+    "release_date": "18 November 2011",
+    "image": "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/ncom/software/switch/70010000000964/811461b8d1cacf1f2da791b478dccfe2a55457780364c3d5a95fbfcdd4c3086f",
+    "description": "Explore randomly generated worlds and build amazing things from the simplest of homes to the grandest of castles. Play in creative mode with unlimited resources or mine deep into the world in survival mode, crafting weapons and armor to fend off the dangerous mobs. Scale craggy mountains, unearth elaborate caves and mine large ore veins. Discover lush cave and dripstone cave biomes. Light up your world with candles to show what a savvy spelunker and master mountaineer you are!",
+    "platforms": "Windows, macOS, Linux",
+    "official_site": "https://www.minecraft.net/en-us",
+    "genre": [
+      1
+    ]
+  }
+},
+{
+  "model": "games.game",
+  "pk": 17,
+  "fields": {
+    "title": "World of Warcraft",
+    "developer": "Blizzard Entertainment",
+    "release_date": "AU/NA: November 23, 2004 EU: February 11, 2005",
+    "image": "https://s.yimg.com/os/creatr-uploaded-images/2022-11/30a59c10-6650-11ed-9fef-b6e2ec4adf1c",
+    "description": "In World of Warcraft, you play a powerful hero who fights towering monsters, delves perilous dungeons, defends the world of Azeroth against all threats, and much more. You can try WoW FREE up to level 20.",
+    "platforms": "Microsoft Windows, macOS",
+    "official_site": "https://worldofwarcraft.blizzard.com/en-us/start",
+    "genre": [
+      2
+    ]
+  }
+},
+{
+  "model": "games.game",
+  "pk": 18,
+  "fields": {
+    "title": "Warframe",
+    "developer": "Digital Extremes",
+    "release_date": "March 25, 2013",
+    "image": "https://n9e5v4d8.ssl.hwcdn.net/images/longlanding/warframe-metacard.png",
+    "description": "Awaken as an unstoppable warrior and battle alongside your friends in this story-driven free-to-play online action game",
+    "platforms": "Microsoft Windows PlayStation 4 Xbox One Nintendo Switch PlayStation 5 Xbox Series X/S",
+    "official_site": "https://www.warframe.com/",
+    "genre": [
+      8
     ]
   }
 }

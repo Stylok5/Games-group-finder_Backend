@@ -1,1 +1,121 @@
 [
+{
+  "model": "groups.group",
+  "pk": 1,
+  "fields": {
+    "name": "Ak sray 700",
+    "game": 1,
+    "owner": 7,
+    "description": "Compestitive group, join and have fun. Post your discord in a chat message.",
+    "likes": 3,
+    "dislikes": 1,
+    "members": [
+      14
+    ]
+  }
+},
+{
+  "model": "groups.group",
+  "pk": 4,
+  "fields": {
+    "name": "Group4",
+    "game": 1,
+    "owner": 7,
+    "description": "Roleplaying group, must have mic. Join our party and have fun!",
+    "likes": 2,
+    "dislikes": 1,
+    "members": []
+  }
+},
+{
+  "model": "groups.group",
+  "pk": 8,
+  "fields": {
+    "name": "Group for raiding",
+    "game": 2,
+    "owner": 3,
+    "description": "Join our raids on saturday and monday",
+    "likes": 1,
+    "dislikes": 1,
+    "members": []
+  }
+},
+{
+  "model": "groups.group",
+  "pk": 10,
+  "fields": {
+    "name": "Group7",
+    "game": 1,
+    "owner": 7,
+    "description": "Chill casual group, join and have fun",
+    "likes": 0,
+    "dislikes": 0,
+    "members": []
+  }
+},
+{
+  "model": "groups.group",
+  "pk": 12,
+  "fields": {
+    "name": "User1's group",
+    "game": 1,
+    "owner": 3,
+    "description": "Fun group, join us now!",
+    "likes": 1,
+    "dislikes": 1,
+    "members": []
+  }
+},
+{
+  "model": "groups.group",
+  "pk": 13,
+  "fields": {
+    "name": "Group for guardian raids.",
+    "game": 2,
+    "owner": 3,
+    "description": "Help with guardian raids.",
+    "likes": 0,
+    "dislikes": 0,
+    "members": []
+  }
+},
+{
+  "model": "groups.group",
+  "pk": 14,
+  "fields": {
+    "name": "new group",
+    "game": 1,
+    "owner": 7,
+    "description": "af",
+    "likes": 1,
+    "dislikes": 1,
+    "members": []
+  }
+},
+{
+  "model": "groups.group",
+  "pk": 15,
+  "fields": {
+    "name": "Best group",
+    "game": 1,
+    "owner": 7,
+    "description": "Houu",
+    "likes": 0,
+    "dislikes": 0,
+    "members": []
+  }
+},
+{
+  "model": "groups.group",
+  "pk": 16,
+  "fields": {
+    "name": "Try hard group",
+    "game": 4,
+    "owner": 7,
+    "description": "Join fast we be tryharding!!",
+    "likes": 0,
+    "dislikes": 0,
+    "members": []
+  }
+}
+]
