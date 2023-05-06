@@ -21,6 +21,11 @@ User = get_user_model()
 
 class RegisterView(APIView):
     def post(self, request):
+        username = request.data.get('username', '')
+        if len(username) < 3 or len(username) > 9:
+            raise APIException({'message': 'Username should be between 3 and 9 characters.'},
+                               code=status.HTTP_422_UNPROCESSABLE_ENTITY)
+
         user_to_create = UserSerializer(data=request.data)
         if user_to_create.is_valid():
             try:
@@ -43,7 +48,7 @@ class LoginView(APIView):
             user_to_login = User.objects.get(email=email)
         except User.DoesNotExist:
             raise PermissionDenied(
-                detail="No user found with that email. Please Register.")
+                detail="Invalid Credentials")
 
         if not user_to_login.check_password(password):
             raise PermissionDenied(detail="Invalid Credentials")
@@ -102,13 +107,17 @@ class UserDetailListView(APIView):
         else:
             user = request.user
 
-        serializer = PopulatedUserSerializer(user, data=request.data)
-
-        if serializer.is_valid():
-            new_username = serializer.validated_data.get('username')
-            if new_username != user.username and User.objects.filter(username=new_username).exists():
+            new_username = request.data.get('username')
+            if new_username is not None:
+                # Perform the validation
+                if not 3 <= len(new_username) <= 9:
+                    return Response({'error': 'Username must be between 3 and 9 characters long.'}, status=status.HTTP_400_BAD_REQUEST)
+            elif new_username != user.username and User.objects.filter(username=new_username).exists():
                 return Response({'error': 'The username you entered is already taken. Please choose a different username.'}, status=status.HTTP_400_BAD_REQUEST)
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_200_OK)
-        else:
-            return Response({'error': 'A user with that username already exists'}, status=status.HTTP_400_BAD_REQUEST)
+
+            # Update the user
+            user.username = new_username
+            user.save()
+
+            serializer = PopulatedUserSerializer(user)
+        return Response(serializer.data, status=status.HTTP_200_OK)

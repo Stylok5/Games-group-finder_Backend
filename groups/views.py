@@ -74,6 +74,11 @@ class GroupDetailView(APIView):
         if request.user != group_to_edit.owner:
             return Response({"detail": "Only the owner of the group can update it."}, status=status.HTTP_403_FORBIDDEN)
 
+        # Check if group with new title already exists
+        new_title = request.data.get('title')
+        if new_title and Group.objects.exclude(pk=group_to_edit.pk).filter(title=new_title).exists():
+            return Response({"error": "A group with this title already exists."}, status=status.HTTP_400_BAD_REQUEST)
+
         request.data["members"] = group_to_edit.members.all(
         ).values_list('id', flat=True)
         updated_group = GroupSerializer(
@@ -84,9 +89,9 @@ class GroupDetailView(APIView):
             updated_group.save()
             return Response(updated_group.data, status=status.HTTP_202_ACCEPTED)
         except ValidationError as e:
-            return Response({"error": "A group with this title already exists"}, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+            return Response({"error": e.detail}, status=status.HTTP_400_BAD_REQUEST)
         except:
-            return Response({"detail": "Unproccesible Entity"}, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
+            return Response({"detail": "Unprocessable Entity"}, status=status.HTTP_422_UNPROCESSABLE_ENTITY)
 
     def delete(self, request, pk):
         group_to_delete = self.get_group(request, pk=pk)
