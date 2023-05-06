@@ -1,1 +1,1 @@
-djangorestframework==3.12.4
+web: python manage.py runserver 0.0.0.0:$PORT --noreload
