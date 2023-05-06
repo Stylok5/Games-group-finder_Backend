@@ -60,7 +60,7 @@ REST_FRAMEWORK = {
 
 CORS_ORIGIN_WHITELIST = (
     'https://games-group-finder.herokuapp.com',
-    'https://group-finder-for-games.netlify.app'
+    'https://group-finder-games.netlify.app'
 )
 
 MIDDLEWARE = [
