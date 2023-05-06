@@ -60,7 +60,7 @@ REST_FRAMEWORK = {
 }
 
 CORS_ORIGIN_WHITELIST = (
-    'https://games-group-finder.herokuapp.com/api/',
+    'https://games-group-finder.herokuapp.com/api',
 )
 
 MIDDLEWARE = [
