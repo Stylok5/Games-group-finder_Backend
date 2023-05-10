@@ -58,10 +58,7 @@ REST_FRAMEWORK = {
     ]
 }
 
-CORS_ORIGIN_WHITELIST = (
-    'https://games-group-finder.herokuapp.com',
-    'https://group-finder-for-games.netlify.app'
-)
+CORS_ORIGIN_ALLOW_ALL = True
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
