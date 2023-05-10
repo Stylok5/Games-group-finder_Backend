@@ -107,17 +107,36 @@ class UserDetailListView(APIView):
         else:
             user = request.user
 
-            new_username = request.data.get('username')
-            if new_username is not None:
-                # Perform the validation
-                if not 3 <= len(new_username) <= 9:
-                    return Response({'error': 'Username must be between 3 and 9 characters long.'}, status=status.HTTP_400_BAD_REQUEST)
-            elif new_username != user.username and User.objects.filter(username=new_username).exists():
+        new_username = request.data.get('username')
+        if new_username is not None:
+            # Perform the validation
+            if not 3 <= len(new_username) <= 9:
+                return Response({'error': 'Username must be between 3 and 9 characters long.'}, status=status.HTTP_400_BAD_REQUEST)
+
+            if new_username != user.username and User.objects.filter(username=new_username).exists():
                 return Response({'error': 'The username you entered is already taken. Please choose a different username.'}, status=status.HTTP_400_BAD_REQUEST)
 
-            # Update the user
+            # Update the user's username
             user.username = new_username
-            user.save()
 
-            serializer = PopulatedUserSerializer(user)
+        new_profile_image = request.data.get('profile_image')
+        if new_profile_image is not None:
+            # Update the user's profile image
+            user.profile_image = new_profile_image
+
+        new_description = request.data.get('description')
+        if new_description is not None:
+            # Update the user's description
+            user.description = new_description
+
+        new_discord_username = request.data.get('discord_username')
+        if new_discord_username is not None:
+            # Update the user's Discord username
+            user.discord_username = new_discord_username
+
+    # Save the updated user object
+        user.save()
+
+    # Serialize the updated user object and return the response
+        serializer = PopulatedUserSerializer(user)
         return Response(serializer.data, status=status.HTTP_200_OK)
