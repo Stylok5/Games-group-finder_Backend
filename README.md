@@ -4,11 +4,6 @@
 
 The backend is connected to a Heroku database so setting it up locally is not required.
 
-To set up the frontend run the following commands:
-`npm install` to install dependancies
-`npm run dev` run the development server
-`npm run build` to create a build directory
-
 ## Table of Contents:
 
 1.  Project Overview
