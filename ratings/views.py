@@ -34,11 +34,13 @@ class Like(APIView):
         group.likes += 1
         if rating.has_disliked:
             group.dislikes -= 1
+            if group.dislikes < 0: # check if dislikes count has reached zero
+                group.likes -= abs(group.dislikes)
+                group.dislikes = 0
         group.save()
 
         # return the updated user likes count
-        user_likes = rating.likes if hasattr(rating, 'likes') else 0
-        return Response({'user_likes': user_likes, 'group_likes': group.likes}, status=status.HTTP_200_OK)
+        return Response({'You liked the group', 'group_likes': group.likes}, status=status.HTTP_200_OK)
 
 
 class Dislike(APIView):
@@ -68,8 +70,10 @@ class Dislike(APIView):
         group.dislikes += 1
         if rating.has_liked:
             group.likes -= 1
+            if group.likes < 0: # check if likes count has reached zero
+                group.dislikes -= abs(group.likes)
+                group.likes = 0
         group.save()
 
         # return the updated user dislikes count
-        user_dislikes = rating.dislikes if hasattr(rating, 'dislikes') else 0
-        return Response({'user_dislikes': user_dislikes, 'group_likes': group.likes, 'group_dislikes': group.dislikes}, status=status.HTTP_200_OK)
+        return Response({'You disliked the group', 'group_dislikes': group.dislikes}, status=status.HTTP_200_OK)
