@@ -17,25 +17,28 @@ class Like(APIView):
         except Group.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
 
-        # check if the user has already rated this group
-        try:
-            rating = Rating.objects.get(group=group, user=user)
-            if rating.has_liked:
-                return Response({'error': 'You have already liked this group'}, status=status.HTTP_400_BAD_REQUEST)
+        rating = Rating.objects.get(group=group, user=user)
+        if not rating.has_liked:
+
             rating.likes += 1
             rating.has_liked = True
-            rating.save()
-        except Rating.DoesNotExist:
-            rating = Rating.objects.create(
-                group=group, user=user, likes=1, has_liked=True)
 
-        # update the group likes count
-        group.likes += 1
-        group.save()
+            if rating.has_disliked:
+                rating.has_disliked = False
+                rating.dislikes -= 1
 
+                rating.save()
+                group.likes += 1
+                group.dislikes -= 1 if rating.has_disliked else 0
+                group.likes += 1
+                group.save()
+
+                return Response({'message': 'Liked group'}, status=status.HTTP_400_BAD_REQUEST)
+
+        return Response({'error': 'You have already liked this group'}, status=status.HTTP_400_BAD_REQUEST)
         # return the updated user likes count
-        user_likes = rating.likes if hasattr(rating, 'likes') else 0
-        return Response({'user_likes': user_likes, 'group_likes': group.likes}, status=status.HTTP_200_OK)
+        # user_likes = rating.likes if hasattr(rating, 'likes') else 0
+        # return Response({'user_likes': user_likes, 'group_likes': group.likes}, status=status.HTTP_200_OK)
 
 
 class Dislike(APIView):
@@ -61,7 +64,7 @@ class Dislike(APIView):
                 group=group, user=user, dislikes=1, has_disliked=True)
 
         # update the group likes count
-        group.dislikes += 1
+        group.likes += 1
         group.save()
 
         # return the updated user likes count
