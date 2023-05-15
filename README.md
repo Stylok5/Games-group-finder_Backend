@@ -27,7 +27,7 @@ This is what you would have to do if, however, you wanted to set it up locally:
 
 Project 4 was the most challenging and rewarding project I undertook during my GA immersive course. I wanted to achieve as many stretch goals as possible and spent considerable time refining my design and style. Initially, I had various ideas for the project, but after consulting with my instructors, I decided to build a multiplayer game group finder. As a lifelong gamer, I was passionate about this idea and put a lot of effort into the project. The group finder was completed within a 17-day period, and it was the last project for our immersive GA course. The backend database was deployed using Heroku, while the frontend was deployed on Netlify. Creating this project with Python Django was a new and exciting yet challenging experience for me. It was my first time working on a larger scale project with this language, but I found working on it quite intriguing and enjoyable.
 
-You can find the deployed project [here](https://bit.ly/3pIG3Df)
+You can find the deployed project [here](https://group-finder-for-games.netlify.app/)
 
 As most actions are locked before authentication registration would be required, but you can also use the premade user's credential which would be: user@gmail.com for email and **userPassword** for password.
 
