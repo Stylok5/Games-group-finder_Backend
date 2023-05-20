@@ -16,7 +16,6 @@ class Like(APIView):
             group = Group.objects.get(pk=pk)
         except Group.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
-
         # check if the user has already rated this group
         try:
             rating = Rating.objects.get(group=group, user=user)
@@ -29,7 +28,6 @@ class Like(APIView):
         except Rating.DoesNotExist:
             rating = Rating.objects.create(
                 group=group, user=user, likes=1, has_liked=True)
-
         # update the group likes count
         group.likes += 1
         if rating.has_disliked:
@@ -38,7 +36,6 @@ class Like(APIView):
                 group.likes -= abs(group.dislikes)
                 group.dislikes = 0
         group.save()
-
         # return the updated user likes count
         return Response({'You liked the group' 'group_likes': group.likes}, status=status.HTTP_200_OK)
 
